@@ -1,0 +1,59 @@
+[
+  {
+    "authorDetails": {
+      "profileImage": "../quoralogo.png",
+      "name": "John Doe",
+      "time": "2 hours ago"
+    },
+    "blogContent": {
+      "title": "How to Learn JavaScript",
+      "contentImage": "../programming_lang.jpeg",
+      "description": "JavaScript is a versatile language used for web development. Here’s how you can get started...",
+      "tags": ["JavaScript", "Programming", "Web Development"]
+    },
+    "stats": {
+      "upvotes": 125,
+      "downvotes": 10,
+      "comments": 15, 
+      "shares": 8
+    }
+  },
+  {
+    "authorDetails": {
+      "profileImage": "../quoralogo.png",
+      "name": "Jane Smith",
+      "time": "5 hours ago"
+    },
+    "blogContent": {
+      "title": "CSS Grid vs Flexbox",
+      "contentImage": "../quoralogo.png",
+      "description": "CSS Grid and Flexbox are two powerful layout systems in CSS. Let’s compare their use cases...",
+      "tags": ["CSS", "Grid", "Flexbox", "Design"]
+    },
+    "stats": {
+      "upvotes": 90,
+      "downvotes": 5,
+      "comments": 10,
+      "shares": 12
+    }
+  },
+  {
+    "authorDetails": {
+      "profileImage": "../quoralogo.png",
+      "name": "Alice Johnson",
+      "time": "1 day ago"
+    },
+    "blogContent": {
+      "title": "Understanding React State",
+      "contentImage": "../quoralogo.png",
+      "description": "React’s state management is a key feature for building dynamic web applications. Here’s a breakdown...",
+      "tags": ["React", "JavaScript", "Frontend"]
+    },
+    "stats": {
+      "upvotes": 200,
+      "downvotes": 20,
+      "comments": 50,
+      "shares": 25
+    }
+  }
+]

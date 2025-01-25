@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+                integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <title>QUORA BLOG</title>
+
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <header>
+                <div class="main-nav">
+                        <h1>Quora</h1>
+
+                        <div class="main-nav-btn">
+                                <button>Sign In</button>
+                                <button>Signup</button>
+                        </div>
+                </div>
+
+                <div class="hero-section">
+                        <div class="blur-div">
+                                blur image
+                                <!-- <img src="./quora_bc_image.jpg" alt=""> -->
+                        </div>
+
+                        <div class="upper-section">
+                                <div class="hero-sub-image">
+                                        <!-- <img src="./quoro_back.jpg" alt="quora_sub_image"> -->
+                                        hero sub image
+                                        <div class="logo-image">
+                                                <img src="./quoralogo.png" alt="">
+                                        </div>
+                                </div>
+                                <div class="header-content">
+                                        <div class="text-box">
+                                                <h2>The Quora Blog</h2>
+                                                <p>The place for official announcements and other major news from the
+                                                        Quora team</p>
+                                                <p>
+                                                        <span><a href="">7 Contributers</a></span>
+
+                                                        <span><a href="">61.8k Followers</a></span>
+                                                </p>
+                                        </div>
+
+                                        <div class="button-box">
+                                                <div class="blank"></div>
+                                                <div class="buttons">
+                                                        <button class="share">
+                                                                <i class="fa-solid fa-share-from-square"></i>
+                                                        </button>
+                                                        <button class="follow">
+                                                                <i class="fa-solid fa-user-plus"></i> Follow
+                                                                Space</button>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+
+        </header>
+
+        <main>
+                <div class="body-part">
+                        <div class="body-content-part">
+                                <div class="body-menu">
+                                        <ul>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">Posts</a></li>
+                                        </ul>
+                                </div>
+
+                                <div class="category-filter">
+                                        <select name="" id="category">
+                                                <option value="top">&#x1F4C8 Top</option>
+                                                <option value="recent">
+                                                        &#128343 Recent
+                                                </option>
+                                        </select>
+                                </div>
+
+                                <div class="post" >
+                                        <div id="blog-container"> </div>
+                                        <template id="blog-template">
+                                                <div class="blog-template-container">
+                                                        <div class="auther-details">
+                                                                <img  alt="image" class="author-profile">
+                                                                <li class="author-name">
+                                                                        <!-- name -->
+                                                                </li>
+                                                                <li class="blog-time"></li>
+                                                        </div>
+
+                                                        <div class="blog-content">
+                                                                <p class="blog-title">tit</p>
+                                                                <div class="content">
+                                                                        <div >
+                                                                                <img class="content-image" alt="description-image">
+                                                                        </div>
+
+                                                                        <p class="content-description">description</p>
+                                                                        <div class="tag">
+                                                                                tag
+                                                                        </div>
+
+                                                                        <div class="stats">
+
+                                                                                <div class="vote">
+                                                                                <button class="Upvote-btn""><i class="fa-solid fa-up-long"></i><span class="Upvote">like</span></button>
+
+                                                                                <button class="devote-btn"><i class="fa-solid fa-down-long"></i><span class="devote">dislike</span></button>
+                                                                                        
+                                                                                <button class="comment-btn"><i class="fa-solid fa-comment"></i><span class="comment">comment</span></button>
+
+                                                                                <button class="share-btn"><i class="fa-solid fa-share"></i><span class="share">share</span></button>
+                                                                                </div>
+
+                                                                                
+                                                                                <!-- <span class="vote">vote</span> -->
+
+
+
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+
+
+
+                                                        <!-- <h2 class="blog-title">hello</h2>
+                                                        <p class="author">
+                                                                <img alt="" class="author-image">
+                                                                <span class="author-name"></span>
+                                                        </p>
+                                                        <p class="blog-content"></p>
+
+                                                        <div class="tags"></div>
+
+                                                        <p class="stats"></p> -->
+                                                </div>
+                                        </template>
+                                </div>
+                        </div>
+                        <div class="aside-part">
+                                
+                                <div class="Contributer-num-block">
+                                        <span class="no-of-contributer"></span>
+                                        Contributer
+                                </div>
+                                <ul class="contributer-list-block" >
+                                </ul>
+
+                                <template id="contributer-list-template">
+                                        <li class="template-container">
+                                                <div class="contributer-img-block">
+                                                        <img  alt="image" class="contributer-img">
+                                                </div>
+                                                <div class="contributer-about">
+                                                        <span class="contributer-name">
+                                                                    <!-- name -->
+                                                        </span>
+                                                        <br> 
+                                                        <span class="contributer-bio">
+                                                                <!-- bio -->
+                                                        </span>
+                                                </div>
+                                        </li>
+                                </template>
+
+                                <div class="site-details" >
+                                        <div class="heading-block">
+                                                Details
+                                        </div>
+                                        <p>
+                                                Quora's company blog. The place for official announcements and other major news from the team. Follow product changes on the <a href="#">product updates blog.</a> 
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+        </main>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

@@ -2,37 +2,37 @@
         "profiles": [
           {
             "name": "Adam D'Angelo",
-            "profile_photo": "../quoralogo.png",
+            "profile_photo": "../quoralogo.webp",
             "bio": "Studied Computer Science at California Institute of Technology (2006)"
           },
           {
             "name": "Quora",
-            "profile_photo": "contributer1.png",
+            "profile_photo": "contributer1.webp",
             "bio": "Official Company Account"
           },
           {
             "name": "Hongping Lim",
-            "profile_photo": "../contributer1.png",
+            "profile_photo": "../contributer1.webp",
             "bio": "Quora engineer" 
           },
           {
             "name": "Spencer Chan",
-            "profile_photo": "../quoralogo.png",
+            "profile_photo": "../quoralogo.webp",
             "bio": "Studied Computer Science at Harvard University (2012)"
           },
           {
             "name": "Michael Ran Chen",
-            "profile_photo": "../quoralogo.png",
+            "profile_photo": "../quoralogo.webp",
             "bio": "M.S.E Computer Science, University of Pennsylvania (2015)"
           },
           {
             "name": "Kara Steele",
-            "profile_photo": "contributer1.png",
+            "profile_photo": "contributer1.webp",
             "bio": "HR at Quora (2020-present)"
           },
           {
             "name": "Quora Knowledge Contests",
-            "profile_photo": "../quoralogo.png",
+            "profile_photo": "../quoralogo.webp",
             "bio": "Quora Knowledge Contests"
           }
         ]

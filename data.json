@@ -1,13 +1,13 @@
 [
   {
     "authorDetails": {
-      "profileImage": "../quoralogo.png",
+      "profileImage": "../quoralogo.webp",
       "name": "John Doe",
       "time": "2 hours ago"
     },
     "blogContent": {
       "title": "How to Learn JavaScript",
-      "contentImage": "../programming_lang.jpeg",
+      "contentImage": "../programming_lang_1.webp",
       "description": "JavaScript is a versatile language used for web development. Here’s how you can get started...",
       "tags": ["JavaScript", "Programming", "Web Development"]
     },
@@ -20,14 +20,14 @@
   },
   {
     "authorDetails": {
-      "profileImage": "../quoralogo.png",
+      "profileImage": "../quoralogo.webp",
       "name": "Jane Smith",
       "time": "5 hours ago"
     },
     "blogContent": {
       "title": "CSS Grid vs Flexbox",
-      "contentImage": "../quoralogo.png",
-      "description": "CSS Grid and Flexbox are two powerful layout systems in CSS. Let’s compare their use cases...",
+      "contentImage": "../quoralogo.webp",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ea doloribus molestiae, pariatur harum corrupti tempora iure nam nemo aliquid quasi. Itaque, fuga saepe dolorem labore minima quod libero nam tempore neque, explicabo perspiciatis provident repudiandae omnis nihil animi et corrupti ipsa ipsum! Pariatur iure facilis iste praesentium, ut dolorum, eius esse dolorem nisi doloremque iusto, quod aperiam magnam excepturi officiis accusantium non in suscipit officia qui tempora deserunt! Consequuntur atque hic enim. Aut voluptas corrupti repudiandae saepe. Aspernatur inventore autem veritatis officia porro itaque nulla delectus expedita, deleniti nihil totam architecto suscipit voluptas provident dignissimos nam sunt minima accusamus.   nihil animi et corrupti ipsa ipsum! Pariatur iure facilis iste praesentium, ut dolorum, eius esse dolorem nisi doloremque iusto, quod aperiam magnam excepturi officiis accusantium non in suscipit officia qui tempora deserunt! Consequuntur atque hic enim. Aut voluptas corrupti repudiandae saepe. Aspernatur inventore autem veritatis officia porro itaque nulla delectus expedita, deleniti nihil totam architecto suscipit voluptas provident dignissimos nam sunt minima accusamus",
       "tags": ["CSS", "Grid", "Flexbox", "Design"]
     },
     "stats": {
@@ -39,13 +39,13 @@
   },
   {
     "authorDetails": {
-      "profileImage": "../quoralogo.png",
+      "profileImage": "../quoralogo.webp",
       "name": "Alice Johnson",
       "time": "1 day ago"
     },
     "blogContent": {
       "title": "Understanding React State",
-      "contentImage": "../quoralogo.png",
+      "contentImage": "../quoralogo.webp",
       "description": "React’s state management is a key feature for building dynamic web applications. Here’s a breakdown...",
       "tags": ["React", "JavaScript", "Frontend"]
     },

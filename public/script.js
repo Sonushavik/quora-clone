@@ -28,6 +28,18 @@
 //     "bio": "Studied Computer Science at California Institute of Technology (2006)"
 //   },
 
+const button = document.getElementById("contributer-display-btn")
+const asideBlock = document.querySelector(".aside-part");
+
+button.addEventListener("click", () => {
+  if(asideBlock.style.display === "none"|| asideBlock.style.display === ""  ){
+    asideBlock.style.display = "block"
+  }else{
+    asideBlock.style.display = "none"
+  }
+})
+
+
 fetch('/data')
   .then(response => {
     if (!response.ok) {
@@ -50,12 +62,13 @@ fetch('/data')
       blogElement.querySelector(".blog-time").textContent = blog.authorDetails.time;
       blogElement.querySelector(".blog-title").textContent = blog.blogContent.title;
       blogElement.querySelector(".content-image").src = blog.blogContent.contentImage;
-      blogElement.querySelector(".content-description").textContent = blog.blogContent.description;
+      const contentDescription = blogElement.querySelector(".content-description");
+      contentDescription.textContent = blog.blogContent.description;
      const tagsContainer =  blogElement.querySelector(".tag");
 
      blog.blogContent.tags.forEach(tag => {
       const tagElement = document.createElement("span");
-      tagElement.textContent = tag ;
+      tagElement.textContent = `#${tag}` ;
       tagsContainer.appendChild(tagElement );
      });
 
@@ -64,6 +77,25 @@ fetch('/data')
      blogElement.querySelector(".devote").textContent = blog.stats.downvotes;
      blogElement.querySelector(".comment").textContent = blog.stats.comments;
      blogElement.querySelector(".share").textContent = blog.stats.shares;
+
+     const moreButton = blogElement.querySelector(".more");
+     moreButton.style.display= "none"
+
+     if (contentDescription.scrollWidth > contentDescription.clientWidth) {
+      moreButton.style.display = "inline"; // Show the button if overflowing
+    }
+
+    // Toggle content visibility on "More" button click
+    moreButton.addEventListener("click", () => {
+      if (contentDescription.classList.contains("expanded")) {
+        contentDescription.classList.remove("expanded");
+        moreButton.textContent = "More";
+      } else {
+        contentDescription.classList.add("expanded");
+        moreButton.textContent = "Less";
+      }
+    });
+
 
       container.appendChild(blogElement);
     });
@@ -104,3 +136,40 @@ fetch("/contributer")
   .catch(error => {
     console.error("Error fetching contributers:", error);
   });
+
+
+
+//   const more = document.querySelector(".more");
+// const contentDescription = document.querySelector(".content-description");
+
+// // Get the computed width of the element
+// const computedStyle = window.getComputedStyle(contentDescription);
+// const width = computedStyle.width;
+
+
+// if(width === "63px"){
+//   more.style.display = "block";
+// }else{
+//   more.style.display = "none"
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const more = document.querySelector(".more");
+//   const contentDescription = document.querySelector(".content-description");
+
+//   // Ensure contentDescription exists before accessing its computed style
+//   if (contentDescription) {
+//     const computedStyle = window.getComputedStyle(contentDescription); // Define 'computedStyle' here
+//     const width = parseFloat(computedStyle.width); // Convert to a number
+
+//     console.log(`Computed width: ${width}px`); // Debugging output
+
+//     if (width === 63) { // Compare as a number
+//       more.style.display = "block";
+//     } else {
+//       more.style.display = "none";
+//     }
+//   } else {
+//     console.error("Element .content-description not found.");
+//   }
+// });

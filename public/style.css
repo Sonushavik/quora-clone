@@ -4,7 +4,7 @@
         margin: 0;
         padding: 0;
         font-family: "Roboto", serif;
-        font-size: 62.5%;
+        font-size: 65%;
         /* 1 rem=10px; */
 }
 
@@ -48,19 +48,7 @@ header{
         border-radius: 50%;
         
 }
-/* 
-.main-nav h1:hover:after{
-        position: absolute;
-        content: "";
-        height: 4rem;
-        width: 10rem;
-        left: 0px;
-        background-color: yellowgreen;
-        border-radius: 10%;
-        z-index: 3;
-        filter: blur(1rem);
-        opacity: 50%;
-} */
+
 
 .main-nav-btn button{
         background-color: #f52936;
@@ -209,6 +197,9 @@ button:hover{
 .header-content .text-box a{
         text-decoration: none;
         color: #f5cac3;
+        font-size: 1.1rem;
+        padding: 0.5rem;
+        font-weight: bolder;
 }
  
 .body-part{
@@ -255,12 +246,10 @@ button:hover{
 
 .category-filter{
         margin: 2px 0px;
-        /* border-bottom: 1px solid black; */
 }
 
 #category{
         background-color: #262626;
-        /* color: white; */
         font-size: 2rem;
         opacity: 100%;
         outline: none;
@@ -307,9 +296,7 @@ button:hover{
         width: 3.6rem;
         height: 3.6rem;
         background-position: center;
-        /* border: 2px solid black; */
         border-radius: 50%;
-        background-color: chocolate;
         margin-right: 1rem;
 }
 
@@ -341,41 +328,25 @@ button:hover{
 
 .content-image{
         width: 100%;
-        aspect-ratio: 16 / 9;
-        /* height: 36.9rem; */
+        aspect-ratio: 1 / 1;
         background-size: auto;
         border-radius: 0.5rem;
 }
 
+
+
 .content-description{
         /* width: 100%; */
-       max-height: 63px;
+       max-height: 6.3rem;
        padding: 0 0.5rem;
-        /* overflow-y: scroll; */
-        overflow: hidden;
-        /* text-overflow: ellipsis; */
-        color: #edede9;
-        /* padding-left: 1rem; */
+        overflow-y: scroll;
         text-align: justify;
+        font-size: 1rem;
         line-height: 1.2;
-        letter-spacing: 0.1rem;
+        scrollbar-width:thin;
+        scrollbar-color: #888 #b61212;
 }
 
-
-/* .content-description.expanded {
-        max-width: none; /* Remove width constraint when expanded */
-        /* white-space: normal; Allow text to wrap */
-      /* } */ */
-
-.more{
-        position: absolute;
-        right: 0;
-        background-color: #3d3d3d;
-        opacity: 1;
-        border: none;
-        color: blue;
-        cursor: pointer;
-}
 
 .tag{
         width: 100%;
@@ -606,7 +577,9 @@ button:hover{
         .button-box button{
                 margin-right: 1rem;
                 width: 9rem;
-                /* font-size: small; */
+                font-size: 1.1rem;
+                padding: 0.5rem;
+                font-weight: bolder;
         }
         
         .header-content .text-box p{

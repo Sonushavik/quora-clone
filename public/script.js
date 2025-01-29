@@ -78,23 +78,23 @@ fetch('/data')
      blogElement.querySelector(".comment").textContent = blog.stats.comments;
      blogElement.querySelector(".share").textContent = blog.stats.shares;
 
-     const moreButton = blogElement.querySelector(".more");
-     moreButton.style.display= "none"
+    //  const moreButton = blogElement.querySelector(".more");
+    //  moreButton.style.display= "none"
 
-     if (contentDescription.scrollWidth > contentDescription.clientWidth) {
-      moreButton.style.display = "inline"; // Show the button if overflowing
-    }
+    //  if (contentDescription.scrollWidth > contentDescription.clientWidth) {
+    //   moreButton.style.display = "inline"; // Show the button if overflowing
+    // }
 
-    // Toggle content visibility on "More" button click
-    moreButton.addEventListener("click", () => {
-      if (contentDescription.classList.contains("expanded")) {
-        contentDescription.classList.remove("expanded");
-        moreButton.textContent = "More";
-      } else {
-        contentDescription.classList.add("expanded");
-        moreButton.textContent = "Less";
-      }
-    });
+    // // Toggle content visibility on "More" button click
+    // moreButton.addEventListener("click", () => {
+    //   if (contentDescription.classList.contains("expanded")) {
+    //     contentDescription.classList.remove("expanded");
+    //     moreButton.textContent = "More";
+    //   } else {
+    //     contentDescription.classList.add("expanded");
+    //     moreButton.textContent = "Less";
+    //   }
+    // });
 
 
       container.appendChild(blogElement);

@@ -1,32 +1,4 @@
-// {
-//   "authorDetails": {
-//     "profileImage": "author1.jpg",
-//     "name": "John Doe",
-//     "time": "2 hours ago"
-//   },
-//   "blogContent": {
-//     "title": "How to Learn JavaScript",
-//     "contentImage": "content1.jpg",
-//     "description": "JavaScript is a versatile language used for web development. Here’s how you can get started...",
-//     "tags": ["JavaScript", "Programming", "Web Development"]
-//   },
-//   "stats": {
-//     "upvotes": 125,
-//     "downvotes": 10,
-//     "comments": 15,
-//     "shares": 8
-//   }
-// },
 
-// import { response } from "express";
-
-
-// "profiles": [
-//   {
-//     "name": "Adam D'Angelo",
-//     "profile_photo": "https://example.com/photos/adam_dangelo.jpg",
-//     "bio": "Studied Computer Science at California Institute of Technology (2006)"
-//   },
 
 const button = document.getElementById("contributer-display-btn")
 const asideBlock = document.querySelector(".aside-part");
@@ -40,7 +12,7 @@ button.addEventListener("click", () => {
 })
 
 
-fetch('/data')
+fetch('/api/data')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -78,23 +50,7 @@ fetch('/data')
      blogElement.querySelector(".comment").textContent = blog.stats.comments;
      blogElement.querySelector(".share").textContent = blog.stats.shares;
 
-    //  const moreButton = blogElement.querySelector(".more");
-    //  moreButton.style.display= "none"
-
-    //  if (contentDescription.scrollWidth > contentDescription.clientWidth) {
-    //   moreButton.style.display = "inline"; // Show the button if overflowing
-    // }
-
-    // // Toggle content visibility on "More" button click
-    // moreButton.addEventListener("click", () => {
-    //   if (contentDescription.classList.contains("expanded")) {
-    //     contentDescription.classList.remove("expanded");
-    //     moreButton.textContent = "More";
-    //   } else {
-    //     contentDescription.classList.add("expanded");
-    //     moreButton.textContent = "Less";
-    //   }
-    // });
+    
 
 
       container.appendChild(blogElement);
@@ -103,7 +59,7 @@ fetch('/data')
   .catch(error => console.error("Error fetching data:", error));
 
 
-fetch("/contributer")
+fetch("/api/contributer")
   .then(response => {
     if(!response.ok){
       throw new Error(`HTTP error status: ${response.status}`);
@@ -138,38 +94,3 @@ fetch("/contributer")
   });
 
 
-
-//   const more = document.querySelector(".more");
-// const contentDescription = document.querySelector(".content-description");
-
-// // Get the computed width of the element
-// const computedStyle = window.getComputedStyle(contentDescription);
-// const width = computedStyle.width;
-
-
-// if(width === "63px"){
-//   more.style.display = "block";
-// }else{
-//   more.style.display = "none"
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const more = document.querySelector(".more");
-//   const contentDescription = document.querySelector(".content-description");
-
-//   // Ensure contentDescription exists before accessing its computed style
-//   if (contentDescription) {
-//     const computedStyle = window.getComputedStyle(contentDescription); // Define 'computedStyle' here
-//     const width = parseFloat(computedStyle.width); // Convert to a number
-
-//     console.log(`Computed width: ${width}px`); // Debugging output
-
-//     if (width === 63) { // Compare as a number
-//       more.style.display = "block";
-//     } else {
-//       more.style.display = "none";
-//     }
-//   } else {
-//     console.error("Element .content-description not found.");
-//   }
-// });

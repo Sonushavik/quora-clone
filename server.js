@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 
-app.get("/data", (req, res) => {
+app.get("/api/data", (req, res) => {
   fs.readFile(path.join(__dirname, "data.json"), "utf-8", (err, data) => {
     if (err) {
       console.error("Error reading file:", err);
@@ -20,7 +20,7 @@ app.get("/data", (req, res) => {
   });
 });
 
-app.get("/contributer", (req, res) => {
+app.get("/api/contributer", (req, res) => {
   fs.readFile(path.join(__dirname, "contributer.json"), "utf-8", (err, contributer) => {
     if (err) {
       console.error("Error reading contributer file:", err);

@@ -1,36 +1,33 @@
 import express from "express";
 import fs from "fs";
-import bodyParser from "body-parser";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
-
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static("public"));
-// Endpoint to get data from the JSON file
+
 app.get("/data", (req, res) => {
-  fs.readFile("data.json", "utf-8", (err, data) => {
+  fs.readFile(path.join(__dirname, "data.json"), "utf-8", (err, data) => {
     if (err) {
       console.error("Error reading file:", err);
       return res.status(500).send("Internal Server Error");
     }
-    console.log(data); // Logs the data to the console
-    res.send(data); // Sends the data back to the client
+    res.json(JSON.parse(data));
   });
 });
 
 app.get("/contributer", (req, res) => {
-  fs.readFile("contributer.json", "utf-8", (err, contributer) => {
-    if(err){
-      console.error("Error reading in contributer file", err);
+  fs.readFile(path.join(__dirname, "contributer.json"), "utf-8", (err, contributer) => {
+    if (err) {
+      console.error("Error reading contributer file:", err);
       return res.status(500).send("Internal Server Error");
     }
-
-    console.log(contributer);
-    res.send(contributer);
+    res.json(JSON.parse(contributer));
   });
 });
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is listening on http://localhost:${PORT}`);
-});
+
+export default app; // Required for Vercel
